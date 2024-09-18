@@ -48,13 +48,29 @@ console.log(`O valor final do produto com desconto de ${desconto}% é: ${valorFi
 a var deve informar o salário bruto, exiba o resultado*/
 
 
+let salarioBruto = 4664.68;
+let salarioLiquido = 0;
 
-
+if (salarioBruto > 4664.68) {
+    salarioLiquido = salarioBruto - (salarioBruto * 0.275)
+} else if (salarioBruto > 3751.06){
+    salarioLiquido = salarioBruto - (salarioBruto * 0.225)
+} else if (salarioBruto > 2826.66){
+    salarioLiquido = salarioBruto - (salarioBruto * 0.15)
+} else if (salarioBruto > 2259.21) {
+    salarioLiquido = salarioBruto - (salarioBruto * 0.75)
+} else {
+    salarioLiquido=salarioBruto
+}
+console.log (`Para uma pessoa com um salario bruto de ${salarioBruto} apos a aplicação de imposto de renda recebera um salario liquido de ${salarioLiquido.toFixed(2)}`)
 
 /*crie um conversor de moedas, considerando taxas de cambio atualizadas, as var devem guardar o valor das moedas inicial e final,
 exiba o resultado*/
 
-
+let valorReal = 100;
+let cambio = 5.46
+let valorDolar = valorReal / cambio
+console.log(`O valor de ${valorReal} reais em dolar é ${valorDolar.toFixed(2)}`)
 
 
 /* crie uma var para a temperatura em celsius e faça a conversão para fahrenheit usando a formula
@@ -69,16 +85,4 @@ console.log(`A conversão da temperatura ${celsius} graus celsius para fahrenhei
 let peso = 58;
 let Altura = 1.63;
 let imc = peso / (Altura * Altura);
-console.log(`O IMC de uma pessoa pesando ${peso}kg e com a altura de ${Altura}m é: ${imc}.`);
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(`O IMC de uma pessoa pesando ${peso}kg e com a altura de ${Altura}m é: ${imc.toFixed(2)}.`);
